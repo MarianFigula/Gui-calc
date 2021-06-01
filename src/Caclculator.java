@@ -32,6 +32,11 @@ class Calculator implements ActionListener {
         URL iconURL = getClass().getResource("calc.png");
 
         // iconURL is null when not found
+        if (iconURL == null){
+            new NullPointerException().printStackTrace();
+            return;
+        }
+
         ImageIcon icon = new ImageIcon(iconURL);
 
         JFrame frame = new JFrame("Calculator");
