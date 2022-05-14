@@ -344,5 +344,8 @@ class Calculator implements ActionListener {
             field.setText(field.getText() + e.getActionCommand());
         }catch (Exception ignored){}
     }
-
+    
+    public Calculator(){
+        this.addButons();
+    }
 }
